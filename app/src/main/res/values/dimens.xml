@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="main_buttons_padding">32dp</dimen>
+    <dimen name="main_icons_padding">32dp</dimen>
+    <dimen name="segments_gap">20dp</dimen>
+    <dimen name="input_section_padding">32dp</dimen>
+    <dimen name="input_controls_gap">6dp</dimen>
+    <dimen name="intro_text_size">16sp</dimen>
+</resources>

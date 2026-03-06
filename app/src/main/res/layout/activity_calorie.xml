@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calorie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.CalorieActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background_color"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <!-- ========== GORNJA SEKCIJA - Slika i opis ========== -->
+        <LinearLayout
+            style="@style/InputSection.Top"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/InputSectionIcon"
+                app:srcCompat="@drawable/ic_calorie_calc" />
+
+            <TextView
+                style="@style/InputSectionDescription"
+                android:text="@string/calorie_desc" />
+        </LinearLayout>
+
+        <!-- ========== SREDNJA SEKCIJA - Sva input polja ========== -->
+        <LinearLayout
+            style="@style/InputSection"
+            android:layout_marginTop="@dimen/segments_gap"
+            android:layout_marginBottom="@dimen/segments_gap">
+
+            <TextView
+                style="@style/InputSectionTitle"
+                android:text="@string/input_controls_desc" />
+
+            <!-- Godine -->
+            <EditText
+                android:id="@+id/ageEditText"
+                style="@style/FitBodyEditText"
+                android:hint="@string/age_hint"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_controls_gap" />
+
+            <!-- RadioGroup za pol -->
+            <RadioGroup
+                android:id="@+id/genderRadioGroup"
+                style="@style/GenderRadioGroup">
+
+                <RadioButton
+                    android:id="@+id/maleRadioButton"
+                    style="@style/GenderRadioButton"
+                    android:text="@string/male_hint" />
+
+                <RadioButton
+                    android:id="@+id/femaleRadioButton"
+                    style="@style/GenderRadioButton"
+                    android:text="@string/female_hint" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_controls_gap" />
+
+            <!-- Visina -->
+            <EditText
+                android:id="@+id/heightEditText"
+                style="@style/FitBodyEditText"
+                android:hint="@string/height_hint"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_controls_gap" />
+
+            <!-- Težina -->
+            <EditText
+                android:id="@+id/weightEditText"
+                style="@style/FitBodyEditText"
+                android:hint="@string/weight_hint"
+                android:inputType="number" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_controls_gap" />
+
+            <!-- Spinner za aktivnost -->
+            <Spinner
+                android:id="@+id/activitySpinner"
+                style="@style/FitBodySpinner"
+                android:entries="@array/spinner_strings" />
+
+        </LinearLayout>
+
+        <!-- ========== DONJA SEKCIJA - Dugme ========== -->
+        <Button
+            style="@style/FitBodyButton"
+            android:onClick="onCalculateClick"
+            android:text="@string/calculate_text" />
+
+    </LinearLayout>
+</LinearLayout>

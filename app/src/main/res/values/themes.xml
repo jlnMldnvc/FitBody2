@@ -1,0 +1,164 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FitBody" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Statusna traka -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Osnovne boje -->
+        <item name="android:colorBackground">@color/background_color</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Default font za ceo projekat -->
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="Theme.FitBody" parent="Base.Theme.FitBody" />
+
+    <!-- === STILOVI ZA DUGMAD NA POČETNOM EKRANU === -->
+    <style name="HomeScreenButtonContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/main_buttons_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/main_buttons_padding</item>
+    </style>
+
+    <!-- Varijanta za prvo dugme (sa donjim marginom) -->
+    <style name="HomeScreenButtonContainer.Top">
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!-- Varijanta za srednje dugme (sa gornjim i donjim marginom) -->
+    <style name="HomeScreenButtonContainer.Middle">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- Varijanta za poslednje dugme (sa gornjim marginom) -->
+    <style name="HomeScreenButtonContainer.Bottom">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!-- === STILOVI ZA IMAGEVIEW U DUGMADIMA === -->
+    <style name="HomeScreenIcon">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/main_icons_padding</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- === STILOVI ZA TEKST U DUGMADIMA === -->
+    <style name="HomeScreenText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.5</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#141414</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <!-- Varijanta za tekst koji je poravnat levo -->
+    <style name="HomeScreenText.Left">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <!-- Varijanta za tekst koji je poravnat desno -->
+    <style name="HomeScreenText.Right">
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!-- === STILOVI ZA INPUT SEKCIJE === -->
+    <style name="InputSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/main_buttons_bg</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/input_section_padding</item>
+    </style>
+
+    <!-- Gornja sekcija sa slikom i opisom - PRAVILNO NASLEĐIVANJE -->
+    <style name="InputSection.Top">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- === STILOVI ZA RADIO GROUP === -->
+    <style name="GenderRadioGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="GenderRadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- === STILOVI ZA INPUT SEKCIJU (SLIKA + OPIS) === -->
+    <style name="InputSectionIcon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/main_icons_padding</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="InputSectionDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/intro_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <!-- === STIL ZA NASLOV UNUTAR INPUT SEKCIJE === -->
+    <style name="InputSectionTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- === STIL ZA EDITTEXT === -->
+    <style name="FitBodyEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <!-- === STIL ZA BUTTON === -->
+    <style name="FitBodyButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:backgroundTint">@color/primary_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <!-- === STIL ZA SPINNER === -->
+    <style name="FitBodySpinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+</resources>

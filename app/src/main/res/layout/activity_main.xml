@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background_color"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding">
+
+        <!-- Dugme 1 - Ideal Weight -->
+        <LinearLayout
+            style="@style/HomeScreenButtonContainer.Top"
+            android:onClick="idealWeightOnClick">
+
+            <ImageView
+                style="@style/HomeScreenIcon"
+                app:srcCompat="@drawable/ic_ideal_weight" />
+
+            <TextView
+                style="@style/HomeScreenText.Right"
+                android:text="@string/ideal_weight_button_text" />
+        </LinearLayout>
+
+        <!-- Dugme 2 - Calorie Calculator -->
+        <LinearLayout
+            style="@style/HomeScreenButtonContainer.Middle"
+            android:onClick="calorieOnClick">
+
+            <TextView
+                style="@style/HomeScreenText.Left"
+                android:text="@string/calorie_calculator_button_text" />
+
+            <ImageView
+                style="@style/HomeScreenIcon"
+                app:srcCompat="@drawable/ic_calorie_calc" />
+        </LinearLayout>
+
+        <!-- Dugme 3 - Body Type -->
+        <LinearLayout
+            style="@style/HomeScreenButtonContainer.Bottom"
+            android:onClick="bodyShapeOnClick">
+
+            <ImageView
+                style="@style/HomeScreenIcon"
+                app:srcCompat="@drawable/ic_body_type" />
+
+            <TextView
+                style="@style/HomeScreenText.Right"
+                android:text="@string/body_type_button_text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
